@@ -31,16 +31,18 @@
         <div class="bill">
           <label id="bill-label" for="bill">Bill</label> <br />
           <input type="text" id="bill-input" /> <br />
-          <label> Select Tip % </label>
-          <div class="pourcents">
-            <p class="pourcentage">5%</p>
-            <p class="pourcentage">10%</p>
-            <p class="pourcentage">15%</p>
-          </div>
-          <div class="pourcents">
-            <p class="pourcentage">25%</p>
-            <p class="pourcentage">50%</p>
-            <input id="custom" class="pourcentage" placeholder="Custom">
+          <label> Select Tip % </label> 
+          <div class="pourcents-container">
+            <div class="pourcents">
+              <p class="pourcentage">5%</p>
+              <p class="pourcentage">10%</p>
+              <p class="pourcentage">15%</p>
+            </div>
+            <div class="pourcents">
+              <p class="pourcentage">25%</p>
+              <p class="pourcentage">50%</p>
+              <input id="custom" class="pourcentage" placeholder="Custom">
+            </div>
           </div>
           <label id="people-label"> Number of People <span id="zero-message">Can't be a zero</span> </label>
 
@@ -54,7 +56,7 @@
               <p>Tip Amount</p>
               <p class="tip-detail">/ person</p>
             </div>
-            <p id="amount">$0</p>
+            <p id="amount">$0.00</p>
           </article>
 
           <article class="tip-total">
@@ -62,7 +64,7 @@
               <p>Total</p>
               <p class="tip-detail">/ person</p>
             </div>
-            <p id="total">$0</p>
+            <p id="total">$0.00</p>
           </article>
 
           <button id="reset">Reset</button>

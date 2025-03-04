@@ -16,8 +16,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
     - [Useful resources](#useful-resources)
   - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -34,7 +32,6 @@ Users should be able to:
 
 ![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
 
-
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
@@ -50,9 +47,6 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
@@ -74,20 +68,13 @@ const proudOfThisFunc = () => {
 }
 ```
 
-
-
 ### Useful resources
 
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
 
 ## Author
 
 - Website - [Add your name here](https://www.your-site.com)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
 - Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-
-
-
