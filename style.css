@@ -123,17 +123,22 @@ button {
   color: hsl(183, 100%, 15%);
 }
 
+/* POURCENTAGE AMOUNTS */
+
+
+
 /* PEOPLE NUMBER LABEL */
 
 #people-label {
     display: flex;
     justify-content: space-between;
     padding-bottom: 5px;
-    #zero-message {
-        color: hsl(11, 36%, 58%);
-        display:none;
-    }
+    
 } 
+#zero-message {
+  color: hsl(11, 36%, 58%);
+  display: none;
+}
 
 
 /* PEOPLE NUMBER INPUT */
