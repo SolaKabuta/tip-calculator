@@ -13,6 +13,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [My process](#my-process)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
+    - [Live preview](#live-preview)
   - [Author](#author)
 
 ## Overview
@@ -70,6 +71,12 @@ five.addEventListener('click', function() {
     total.textContent = ((bill + tip) / people).toFixed(2);
 });
 ```
+
+### Live preview
+
+Click the link below to access preview
+
+[Live-preview](https://tip-calculator-eight-lovat.vercel.app)
 
 ## Author
 
