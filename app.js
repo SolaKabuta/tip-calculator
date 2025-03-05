@@ -12,17 +12,16 @@ document
     let tipAmount = document.getElementById("amount");
     let tip = parseInt(tipAmount.value);
 
-    // let total = document.getElementById("total");
-
     let errorMessage = document.getElementById("zero-message");
 
 
     if (isNaN(bill)) {
-      alert(`"${billInput.value}" can't be empty`);
+      alert(`can't be empty or whatever "${billInput.value}" is`);
     }
 
     if (people === 0) {
       errorMessage.style.display = "block";
+      peopleNumberInput.style.outline = "1px solid hsl(11, 36%, 58%)"
     } 
 
   });
@@ -153,9 +152,9 @@ customInput.addEventListener('click', function() {
 // RESET BUTTON
 
 reset.addEventListener('click', function(){
-        billInput.value = "0";
+        billInput.value = 0;
         peopleNumberInput.value = 1;
         tipAmount.textContent = "$0.00";
-        total.textContent = "0.00"
+        total.textContent = "$0.00"
         return;
     })

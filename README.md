@@ -28,9 +28,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
+![](/images/screenshots/screenshot.png)
+![](/images/screenshots/screenshot_2.png)
+![](/images/screenshots/screenshot_errors.png)
 
 ### Links
 
@@ -39,6 +39,8 @@ Users should be able to:
 
 ## My process
 
+Classic process, I adjusted html tag in order to manipulate them the easiest way with css and javascript.
+
 ### Built with
 
 - Semantic HTML5 markup
@@ -46,16 +48,28 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I learned to handle and organize javascript events. 
+And how to give two values to a variable with the `||` operator.
 
-To see how you can add code snippets, see below:
+```javascript
+five.addEventListener('click', function() {
+    const bill = parseFloat(billInput.value) || 0;
+    let people = parseInt(peopleNumberInput.value) || 1;
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+    if (people === 0) {
+        errorMessage.style.display = "block";
+        return;
+    } else {
+        errorMessage.style.display = "none";
+    }
+
+    const tip = (bill / 100) * 5;
+    tipAmount.textContent = tip.toFixed(2);
+    total.textContent = ((bill + tip) / people).toFixed(2);
+});
 ```
 
 ### Useful resources
@@ -65,6 +79,6 @@ To see how you can add code snippets, see below:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [portfolio](https://www.solakabuta.com)
+- Frontend Mentor - [@SolaKabuta](https://www.frontendmentor.io/profile/SolaKabuta)
+- Twitter - [@Sola_Kabuta](https://www.twitter.com/Sola_Kabuta)
