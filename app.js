@@ -12,25 +12,10 @@ document
     let tipAmount = document.getElementById("amount");
     let tip = parseInt(tipAmount.value);
 
-    let total = document.getElementById("total");
+    // let total = document.getElementById("total");
 
     let errorMessage = document.getElementById("zero-message");
 
-    const reset = document.getElementById('reset');
-
-    const five = document.getElementById('five');
-    const ten = document.getElementById('ten');
-    const fifteen = document.getElementById('fifteen');
-    const twentyfive = document.getElementById('twenty-five');
-    const customInput = document.getElementById('custom');
-    const custom = parseInt(customInput.value);
-
-    // reset.addEventListener('click', function(){
-    //     billInput = "";
-    //     bill = 0;
-    //     people = 0;
-    //     return;
-    // })
 
     if (isNaN(bill)) {
       alert(`"${billInput.value}" can't be empty`);
@@ -40,21 +25,137 @@ document
       errorMessage.style.display = "block";
     } 
 
-    five.addEventListener('click', function(){
-        if (people === 0) {
-            errorMessage.style.display = "block";
-        } else if ( peopleNumberInput.textContent == "") {
-            people = 1;
-            total.textContent = ((bill / 100) * 0 + bill)/people;
-        } else {
-        tipAmount.textContent = (bill / 100) * 5;       
-        total.textContent = ((bill / 100) * 5 + bill)/people;
-        }
-        return;
-    },{once: true});
-
-
-    
-
-    console.log(tipAmount.value);
   });
+
+
+const billInput = document.getElementById("bill-input");
+const peopleNumberInput = document.getElementById("people-number");
+const tipAmount = document.getElementById("amount");
+const total = document.getElementById("total");
+const errorMessage = document.getElementById("zero-message");
+
+const five = document.getElementById('five');
+const ten = document.getElementById('ten');
+const fifteen = document.getElementById('fifteen');
+const twentyfive = document.getElementById('twenty-five');
+const fifty = document.getElementById('fifty');
+const customInput = document.getElementById('custom');
+const custom = parseInt(customInput.value);
+
+// 5% BUTTON
+
+five.addEventListener('click', function() {
+    const bill = parseFloat(billInput.value) || 0;
+    let people = parseInt(peopleNumberInput.value) || 1;
+
+    if (people === 0) {
+        errorMessage.style.display = "block";
+        return;
+    } else {
+        errorMessage.style.display = "none";
+    }
+
+    const tip = (bill / 100) * 5;
+    tipAmount.textContent = tip.toFixed(2);
+    total.textContent = ((bill + tip) / people).toFixed(2);
+});
+
+// 10% BUTTON
+
+ten.addEventListener('click', function() {
+    const bill = parseFloat(billInput.value) || 0;
+    let people = parseInt(peopleNumberInput.value) || 1;
+
+    if (people === 0) {
+        errorMessage.style.display = "block";
+        return;
+    } else {
+        errorMessage.style.display = "none";
+    }
+
+    const tip = (bill / 100) * 10;
+    tipAmount.textContent = tip.toFixed(2);
+    total.textContent = ((bill + tip) / people).toFixed(2);
+});
+
+// 15% BUTTON
+
+fifteen.addEventListener('click', function() {
+    const bill = parseFloat(billInput.value) || 0;
+    let people = parseInt(peopleNumberInput.value) || 1;
+
+    if (people === 0) {
+        errorMessage.style.display = "block";
+        return;
+    } else {
+        errorMessage.style.display = "none";
+    }
+
+    const tip = (bill / 100) * 15;
+    tipAmount.textContent = tip.toFixed(2);
+    total.textContent = ((bill + tip) / people).toFixed(2);
+});
+
+// 25% BUTTON
+
+twentyfive.addEventListener('click', function() {
+    const bill = parseFloat(billInput.value) || 0;
+    let people = parseInt(peopleNumberInput.value) || 1;
+
+    if (people === 0) {
+        errorMessage.style.display = "block";
+        return;
+    } else {
+        errorMessage.style.display = "none";
+    }
+
+    const tip = (bill / 100) * 25;
+    tipAmount.textContent = tip.toFixed(2);
+    total.textContent = ((bill + tip) / people).toFixed(2);
+});
+
+// 50% BUTTON
+
+fifty.addEventListener('click', function() {
+    const bill = parseFloat(billInput.value) || 0;
+    let people = parseInt(peopleNumberInput.value) || 1;
+
+    if (people === 0) {
+        errorMessage.style.display = "block";
+        return;
+    } else {
+        errorMessage.style.display = "none";
+    }
+
+    const tip = (bill / 100) * 50;
+    tipAmount.textContent = tip.toFixed(2);
+    total.textContent = ((bill + tip) / people).toFixed(2);
+});
+
+// CUSTOM BUTTON
+
+customInput.addEventListener('click', function() {
+    const bill = parseFloat(billInput.value) || 0;
+    let people = parseInt(peopleNumberInput.value) || 1;
+
+    if (people === 0) {
+        errorMessage.style.display = "block";
+        return;
+    } else {
+        errorMessage.style.display = "none";
+    }
+
+    const tip = (bill / 100) * parseInt(customInput.value);
+    tipAmount.textContent = tip.toFixed(2);
+    total.textContent = ((bill + tip) / people).toFixed(2);
+});
+
+// RESET BUTTON
+
+reset.addEventListener('click', function(){
+        billInput.value = "0";
+        peopleNumberInput.value = 1;
+        tipAmount.textContent = "$0.00";
+        total.textContent = "0.00"
+        return;
+    })
